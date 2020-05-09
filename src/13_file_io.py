@@ -11,7 +11,9 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 # YOUR CODE HERE
 
-f = open('/foo.txt', 'r')
+f = open('foo.txt', 'r')
+print(f.readlines())
+f.close()
 
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
@@ -20,3 +22,10 @@ f = open('/foo.txt', 'r')
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+
+e = open('bar.txt', 'w')
+e.write("I\'m learning python\nIt\'s different\nI like Data Science")
+e.close()
+
+e = open('bar.txt', 'r')
+print(e.readlines())
